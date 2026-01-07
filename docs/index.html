@@ -1,1 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Killer Game</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>
+        <div class="brand-title">Killer Game</div>
+        <div class="brand-sub">Tablette / Soirée</div>
+      </div>
+    </div>
 
+    <button id="btnHomeHeader" class="btn btn-ghost" type="button">
+      Retour à l’accueil
+    </button>
+  </header>
+
+  <main class="container">
+    <!-- GLOBAL ALERT -->
+    <div id="globalAlert" class="alert hidden" role="alert"></div>
+
+    <!-- VIEW: HOME -->
+    <section id="viewHome" class="view">
+      <div class="grid2">
+        <div class="card">
+          <h1>Récupérer ma mission</h1>
+          <p class="muted">
+            Entre ton nom et prénom, récupère ta mission, et attention au timer.
+          </p>
+
+          <form id="formLogin" class="stack" autocomplete="off">
+            <label class="label" for="inputName">Nom & prénom</label>
+            <input
+              id="inputName"
+              class="input"
+              type="text"
+              placeholder="Ex: Lucas Veiga"
+              required
+            />
+
+            <button class="btn btn-primary" type="submit">
+              Récupérer ma mission
+            </button>
+
+            <div class="hint">
+              Astuce : tu peux taper sans accents (ex: “Theo”).
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>Réalisation / Déductions</h2>
+          <p class="muted">
+            Quand tu reviens plus tard, tu peux déclarer ta mission faite ou tenter de deviner
+            qui t’a ciblé et avec quelle mission.
+          </p>
+
+          <div class="stack">
+            <button id="btnGoGuessFromHome" class="btn btn-secondary" type="button">
+              J’ai trouvé la mission dont j’étais la cible
+            </button>
+
+            <button id="btnGoMissionFromHome" class="btn btn-ghost" type="button">
+              Voir ma mission (si déjà connecté)
+            </button>
+
+            <hr class="sep"/>
+
+            <div id="adminBlock" class="admin hidden">
+              <div class="admin-title">Admin (Lucas Veiga)</div>
+              <button id="btnGoAdmin" class="btn btn-danger" type="button">
+                Voir la liste des participants
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span class="muted">
+          L’écran mission se ferme automatiquement après 10 secondes.
+        </span>
+      </footer>
+    </section>
+
+    <!-- VIEW: MISSION -->
+    <section id="viewMission" class="view hidden">
+      <div class="card">
+        <div class="row space-between">
+          <div>
+            <h2>Ta mission</h2>
+            <div id="whoami" class="chip"></div>
+          </div>
+
+          <div class="timer">
+            <div class="timer-label">Retour accueil dans</div>
+            <div id="countdown" class="timer-value">10</div>
+          </div>
+        </div>
+
+        <div class="mission-box">
+          <div class="mission-label">Mission</div>
+          <div id="missionText" class="mission-text">—</div>
+        </div>
+
+        <div class="mission-box">
+          <div class="mission-label">Cible</div>
+          <div id="targetText" class="mission-text">—</div>
+        </div>
+
+        <div class="actions">
+          <button id="btnMissionDone" class="btn btn-primary" type="button">
+            J’ai effectué ma mission
+          </button>
+
+          <button id="btnGoGuessFromMission" class="btn btn-secondary" type="button">
+            J’ai trouvé la mission dont j’étais la cible
+          </button>
+
+          <button id="btnHomeMission" class="btn btn-ghost" type="button">
+            Retour à l’accueil
+          </button>
+        </div>
+
+        <div id="missionStatus" class="status muted"></div>
+      </div>
+    </section>
+
+    <!-- VIEW: GUESS -->
+    <section id="viewGuess" class="view hidden">
+      <div class="card">
+        <div class="row space-between">
+          <div>
+            <h2>J’ai trouvé la mission dont j’étais la cible</h2>
+            <div class="muted">Accuse un killer + décris la mission qu’il a faite contre toi.</div>
+          </div>
+
+          <button id="btnHomeGuess" class="btn btn-ghost" type="button">
+            Retour à l’accueil
+          </button>
+        </div>
+
+        <form id="formGuess" class="stack" autocomplete="off">
+          <label class="label" for="killerInput">Prénom du killer</label>
+          <input
+            id="killerInput"
+            class="input"
+            type="text"
+            list="playersDatalist"
+            placeholder="Tape pour filtrer… (ex: Lu → Lucas, Ludo…)"
+            required
+          />
+          <datalist id="playersDatalist"></datalist>
+          <div class="hint">
+            Choisis un nom proposé (liste déroulante) pour éviter les erreurs.
+          </div>
+
+          <label class="label" for="guessMission">Mission devinée</label>
+          <textarea
+            id="guessMission"
+            class="textarea"
+            rows="4"
+            placeholder="Décris la mission que tu penses avoir subie…"
+            required
+          ></textarea>
+
+          <button class="btn btn-primary" type="submit">
+            Valider mon guess
+          </button>
+
+          <div id="guessStatus" class="status muted"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- VIEW: ADMIN -->
+    <section id="viewAdmin" class="view hidden">
+      <div class="card">
+        <div class="row space-between">
+          <div>
+            <h2>Classement</h2>
+            <div class="muted">Visible uniquement depuis le profil Lucas Veiga.</div>
+          </div>
+
+          <button id="btnHomeAdmin" class="btn btn-ghost" type="button">
+            Retour à l’accueil
+          </button>
+        </div>
+
+        <div class="row gap">
+          <button id="btnRefreshAdmin" class="btn btn-secondary" type="button">
+            Rafraîchir
+          </button>
+        </div>
+
+        <div class="tablewrap">
+          <table class="table" id="adminTable">
+            <thead>
+              <tr>
+                <th>Joueur</th>
+                <th>Points</th>
+                <th>Mission réalisée</th>
+                <th>Découvert par la cible</th>
+                <th>A trouvé son killer</th>
+                <th>Guess killer</th>
+                <th>Guess mission</th>
+              </tr>
+            </thead>
+            <tbody id="adminTbody">
+              <tr><td colspan="7" class="muted">Chargement…</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="hint">
+          Note : le calcul exact des points vient du backend. Le frontend affiche.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
