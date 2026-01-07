@@ -8,10 +8,10 @@
     "mission": "Bonjour agent Pauline.\n\nVotre mission, si vous l’acceptez, sera d’attendre le jour J pour connaître votre mission, petite curieuse.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Maxence": {
-    "target": "Romain",
+    "target": "Romain H",
     "mission": "Bonjour agent Maxence.\n\nVotre mission, si vous l’acceptez, sera de trouver Romain et de lui proposer un concours de pompes.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Romain": {
+  "Romain H": {
     "target": "David",
     "mission": "Bonjour agent Romain.\n\nVotre mission, si vous l’acceptez, sera de trouver David et de lui faire un câlin.\n\nCe message s’autodétruira dans 10 secondes."
   },
@@ -99,7 +99,7 @@
     "target": "Léa Latouche",
     "mission": "Bonjour agent Nellie.\n\nVotre mission, si vous l’acceptez, sera de piquer le verre de Léa L une bonne partie de la soirée sans vous faire prendre.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Léa L": {
+  "Léa Latouche": {
     "target": "Adélaïde",
     "mission": "Bonjour agent Léa L.\n\nVotre mission, si vous l’acceptez, sera de persuader Adélaïde qu’il y a le feu dans la cuisine du restaurant et qu’il faut peut-être agir…\n\nCe message s’autodétruira dans 10 secondes."
   },
@@ -183,7 +183,7 @@
     "target": "Léa Gaussot",
     "mission": "Bonjour agent Maelann.\n\nVotre mission, si vous l’acceptez, sera de faire deviner à Léa G le mot « Tour Eiffel » en mimant.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Léa G": {
+  "Léa Gaussot": {
     "target": "Cécile",
     "mission": "Bonjour agent Léa G.\n\nVotre mission, si vous l’acceptez, sera de proposer à Cécile un concours de langue en folie : dire 10 fois une phrase difficile sans se tromper (exemple : « Les chaussettes de l’archiduchesse… »).\n\nCe message s’autodétruira dans 10 secondes."
   },
@@ -192,7 +192,7 @@
     "mission": "Bonjour agent Cécile.\n\nVotre mission, si vous l’acceptez, sera de faire des grimaces à Lou plusieurs fois dans la soirée sans raison.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Lou": {
-    "target": "",
+    "target": "Lou",
     "mission": "Bonjour agent Lou.\n\nVotre mission, si vous l’acceptez, sera de faire un slow imaginaire avec quelqu’un pendant 15 secondes.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Aida": {
