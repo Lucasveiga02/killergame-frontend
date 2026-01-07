@@ -1,17 +1,17 @@
 {
   "Lucas": {
     "target": "Pauline",
-    "mission": "Bonjour agent Lucas.\n\nVotre mission, si vous l’acceptez, sera de trouver Pauline et de réaliser une mission de votre choix parce que vous êtes bcp trop beau et bcp trop fort en code, espèce de gros bg va.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Lucas.\n\nVotre mission, si vous l’acceptez, sera de trouver Pauline et de réaliser une mission de votre choix parce que vous êtes beaucoup trop beau et beaucoup trop fort en code, espèce de gros BG.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Pauline": {
     "target": "Lucas",
-    "mission": "Bonjour agent Pauline.\n\nVotre mission, si vous l’acceptez, sera d'attendre le jour J pour connaître votre mission, petite curieuse va ;).\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Pauline.\n\nVotre mission, si vous l’acceptez, sera d’attendre le jour J pour connaître votre mission, petite curieuse.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Maxence": {
     "target": "Romain",
     "mission": "Bonjour agent Maxence.\n\nVotre mission, si vous l’acceptez, sera de trouver Romain et de lui proposer un concours de pompes.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Romain H": {
+  "Romain": {
     "target": "David",
     "mission": "Bonjour agent Romain.\n\nVotre mission, si vous l’acceptez, sera de trouver David et de lui faire un câlin.\n\nCe message s’autodétruira dans 10 secondes."
   },
@@ -29,7 +29,7 @@
   },
   "Jumelles": {
     "target": "Maëva",
-    "mission": "Bonjour à vous les Jumelles.\n\nVotre mission, si vous l’acceptez, sera de trouver Maëva et de faire un TikTok avec elle.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agents Jumelles.\n\nVotre mission, si vous l’acceptez, sera de trouver Maëva et de faire un TikTok (trend) avec elle.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Maëva": {
     "target": "Hugues",
@@ -41,7 +41,7 @@
   },
   "Théo": {
     "target": "Mathilde",
-    "mission": "Bonjour agent Théo.\n\nVotre mission, si vous l’acceptez, sera de trouver Mathilde et de faire connaissance avec elle en prenant un accent de votre choix.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Théo.\n\nVotre mission, si vous l’acceptez, sera de choisir un accent et de faire connaissance avec Mathilde en prenant cet accent.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Mathilde": {
     "target": "Christine",
@@ -49,15 +49,15 @@
   },
   "Christine": {
     "target": "Fanny",
-    "mission": "Bonjour agent Christine.\n\nVotre mission, si vous l’acceptez, sera de trouver Fanny, de lui demander sa musique préférée et d’aller ensuite la mettre sur l’enceinte.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Christine.\n\nVotre mission, si vous l’acceptez, sera de trouver Fanny, de lui demander sa musique préférée, puis d’aller ensuite la mettre sur l’enceinte.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Fanny": {
     "target": "Domitille",
-    "mission": "Bonjour agent Fanny.\n\nVotre mission, si vous l’acceptez, sera de trouver Domitille et de faire un chifoumi en trois avec elle jusqu’à la battre.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Fanny.\n\nVotre mission, si vous l’acceptez, sera d’aller faire un chifoumi en 3 avec Domi et de la battre (recommence tant que tu perds).\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Domitille": {
     "target": "Ludo",
-    "mission": "Bonjour agent Domitille.\n\nVotre mission, si vous l’acceptez, sera de trouver Ludo et de lui faire croire que vous déménagez à Toulouse et avez besoin de son aide.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Domi.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Ludo que vous déménagez à Toulouse et que vous avez besoin qu’il vous aide (c’est son métier).\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Ludo": {
     "target": "Claude",
@@ -65,138 +65,138 @@
   },
   "Claude": {
     "target": "Inès",
-    "mission": "Bonjour agent Claude.\n\nVotre mission, si vous l’acceptez, sera de trouver Inès et de lui faire croire que vous avez réservé une greffe de cheveux en Turquie en lui demandant conseil pour des facettes.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Claude.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Inès que vous avez réservé une greffe de cheveux en Turquie et de lui demander des conseils pour vous faire des facettes par la même occasion.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Inès": {
     "target": "Mathis",
-    "mission": "Bonjour agent Inès.\n\nVotre mission, si vous l’acceptez, sera de trouver Mathis et de le faire danser sur du kuduro en lui apprenant les pas.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Inès.\n\nVotre mission, si vous l’acceptez, sera de faire danser Mathis sur le kuduro et de lui apprendre (attention : il faut le trouver avant que ça passe).\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Mathis": {
     "target": "Stéphane",
-    "mission": "Bonjour agent Mathis.\n\nVotre mission, si vous l’acceptez, sera de trouver Stéphane, de lui passer les menottes et de le livrer à Sylvie sans contexte.\n\nCe message s’autodétruira dans 10 secondes."
-  },
-  "Stéphane": {
-    "target": "Sylvie",
-    "mission": "Bonjour agent Stéphane.\n\nVotre mission, si vous l’acceptez, sera de trouver Sylvie et de lui expliquer pourquoi vous détestez la Bretagne.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Mathis.\n\nVotre mission, si vous l’acceptez, sera de passer les menottes à Stéphane et de le livrer à Sylvie sans contexte.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Sylvie": {
+    "target": "Quelqu’un",
+    "mission": "Bonjour agent Sylvie.\n\nVotre mission, si vous l’acceptez, sera d’attendre qu’on vous livre quelqu’un et de lui faire passer un éthylotest.\n\nCe message s’autodétruira dans 10 secondes."
+  },
+  "Stéphane": {
     "target": "Nolwenn",
-    "mission": "Bonjour agent Sylvie.\n\nVotre mission, si vous l’acceptez, sera de trouver Nolwenn et de lui faire passer un éthylotest après réception d’un individu.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Stéphane.\n\nVotre mission, si vous l’acceptez, sera d’expliquer à Nolwenn pourquoi vous détestez la Bretagne.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Nolwenn": {
     "target": "François",
-    "mission": "Bonjour agent Nolwenn.\n\nVotre mission, si vous l’acceptez, sera de trouver François et de lui toucher l’épaule à plusieurs reprises sans vous faire prendre.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Nolwenn.\n\nVotre mission, si vous l’acceptez, sera de toucher l’épaule de François sans vous faire prendre pour l’embêter (faire ça à plusieurs reprises).\n\nCe message s’autodétruira dans 10 secondes."
   },
   "François": {
     "target": "Alex",
-    "mission": "Bonjour agent François.\n\nVotre mission, si vous l’acceptez, sera de trouver Alex et de lui raconter l’histoire sombre de la ferme.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent François.\n\nVotre mission, si vous l’acceptez, sera d’expliquer à Alex l’histoire sombre de la ferme : plusieurs personnes sont mortes dans cette pièce (place à l’imagination).\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Alex": {
     "target": "Nellie",
-    "mission": "Bonjour agent Alex.\n\nVotre mission, si vous l’acceptez, sera de trouver Nellie et de lui annoncer que vous partez vivre en Inde.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Alex.\n\nVotre mission, si vous l’acceptez, sera d’annoncer à Nellie que vous partez vivre en Inde.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Nellie": {
-    "target": "Léa Latouche",
-    "mission": "Bonjour agent Nellie.\n\nVotre mission, si vous l’acceptez, sera de trouver Léa Latouche et de lui piquer son verre une bonne partie de la soirée sans vous faire prendre.\n\nCe message s’autodétruira dans 10 secondes."
+    "target": "Léa L",
+    "mission": "Bonjour agent Nellie.\n\nVotre mission, si vous l’acceptez, sera de piquer le verre de Léa L une bonne partie de la soirée sans vous faire prendre.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Léa Latouche": {
-    "target": "Adélaide",
-    "mission": "Bonjour agent Léa Latouche.\n\nVotre mission, si vous l’acceptez, sera de trouver Adélaide et de la persuader qu’il y a le feu dans la cuisine du restaurant.\n\nCe message s’autodétruira dans 10 secondes."
+  "Léa L": {
+    "target": "Adélaïde",
+    "mission": "Bonjour agent Léa L.\n\nVotre mission, si vous l’acceptez, sera de persuader Adélaïde qu’il y a le feu dans la cuisine du restaurant et qu’il faut peut-être agir…\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Adélaide": {
+  "Adélaïde": {
     "target": "Sara",
-    "mission": "Bonjour agent Adélaide.\n\nVotre mission, si vous l’acceptez, sera de trouver Sara et de lui demander si elle entend aussi ce bruit.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Adelaide.\n\nVotre mission, si vous l’acceptez, sera de demander à Sara si elle entend aussi ce bruit (choisir le bruit en question).\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Sara": {
     "target": "Manon",
-    "mission": "Bonjour agent Sara.\n\nVotre mission, si vous l’acceptez, sera de trouver Manon et de lui expliquer votre phobie des fruits et légumes oranges.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Sara.\n\nVotre mission, si vous l’acceptez, sera d’expliquer votre phobie étrange des fruits et légumes oranges à Manon.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Manon": {
     "target": "Justine",
-    "mission": "Bonjour agent Manon.\n\nVotre mission, si vous l’acceptez, sera de trouver Justine et de lui chuchoter « miaou » à plusieurs reprises dans la soirée.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Manon.\n\nVotre mission, si vous l’acceptez, sera de chuchoter à l’oreille de Justine « miaou » à plusieurs reprises au cours de la soirée.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Justine": {
     "target": "Maelenn",
-    "mission": "Bonjour agent Justine.\n\nVotre mission, si vous l’acceptez, sera de trouver Maelenn et de lui faire votre meilleure blague.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Justine.\n\nVotre mission, si vous l’acceptez, sera de faire votre meilleure blague à Maelenn.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Maelenn": {
     "target": "Marc",
-    "mission": "Bonjour agent Maelenn.\n\nVotre mission, si vous l’acceptez, sera de trouver Marc, de prendre son verre et de boire devant lui.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Maelenn.\n\nVotre mission, si vous l’acceptez, sera de prendre le verre de Marc qu’il tient dans ses mains et de boire devant lui.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Marc": {
     "target": "Isabel",
-    "mission": "Bonjour agent Marc.\n\nVotre mission, si vous l’acceptez, sera de trouver Isabel et de lui faire croire que vous avez vu des souris sur le comptoir.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Marc.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Isabel que vous avez vu 2/3 souris sur le comptoir.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Isabel": {
     "target": "Aude",
-    "mission": "Bonjour agent Isabel.\n\nVotre mission, si vous l’acceptez, sera de trouver Aude et de lui faire un câlin trois fois dans la soirée.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Isabel.\n\nVotre mission, si vous l’acceptez, sera de faire un câlin à Aude 3 fois dans la soirée.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Aude": {
     "target": "Tony",
-    "mission": "Bonjour agent Aude.\n\nVotre mission, si vous l’acceptez, sera de trouver Tony et de lui dire que quelqu’un l’attend dehors.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Aude.\n\nVotre mission, si vous l’acceptez, sera d’aller voir Tony et de lui dire que quelqu’un l’attend en bas dehors.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Tony": {
     "target": "Steven",
-    "mission": "Bonjour agent Tony.\n\nVotre mission, si vous l’acceptez, sera de trouver Steven et de le convaincre de faire un cul sec avec vous.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Tony.\n\nVotre mission, si vous l’acceptez, sera de convaincre Steven de faire un cul sec avec vous.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Steven": {
     "target": "Antoine",
-    "mission": "Bonjour agent Steven.\n\nVotre mission, si vous l’acceptez, sera de trouver Antoine et de répéter ses phrases.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Steven.\n\nVotre mission, si vous l’acceptez, sera de répéter les phrases d’Antoine.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Antoine": {
-    "target": "Jean-Mi",
-    "mission": "Bonjour agent Antoine.\n\nVotre mission, si vous l’acceptez, sera de trouver Jean-Mi et de lui faire croire que Trump devrait s’occuper de Macron comme de Maduro.\n\nCe message s’autodétruira dans 10 secondes."
+    "target": "Jean mi",
+    "mission": "Bonjour agent Antoine.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Jean mi que vous voudriez que Trump s’occupe de Macron comme il s’est occupé de Maduro.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Jean-Mi": {
+  "Jean mi": {
     "target": "Emie",
-    "mission": "Bonjour agent Jean-Mi.\n\nVotre mission, si vous l’acceptez, sera de trouver Emie et de lui faire croire qu’une grosse araignée est sur son épaule.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Jean mi.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Emie qu’une grosse araignée est posée sur son épaule.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Emie": {
     "target": "Joyce",
-    "mission": "Bonjour agent Emie.\n\nVotre mission, si vous l’acceptez, sera de trouver Joyce, de lui faire signe de vous suivre puis de dire « non laisse » trois fois dans la soirée.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Emie.\n\nVotre mission, si vous l’acceptez, sera de faire signe à Joyce de vous suivre dans la mezzanine puis de dire « non laisse » 3 fois dans la soirée.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Joyce": {
-    "target": "Gaby",
-    "mission": "Bonjour agent Joyce.\n\nVotre mission, si vous l’acceptez, sera de trouver Gaby et de lui faire croire que vous avez été figurante dans un film ou une série connue.\n\nCe message s’autodétruira dans 10 secondes."
+    "target": "Gabi",
+    "mission": "Bonjour agent Joyce.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Gabi que vous avez été figurante dans un film ou une série connue (au choix).\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Gaby": {
+  "Gabi": {
     "target": "Zara",
-    "mission": "Bonjour agent Gaby.\n\nVotre mission, si vous l’acceptez, sera de trouver Zara et de lui faire dire une phrase en portugais.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Gabi.\n\nVotre mission, si vous l’acceptez, sera de faire dire cette phrase en portugais à Zara : « Eu quero mamar os peitos da cabritinha ».\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Zara": {
     "target": "José",
-    "mission": "Bonjour agent Zara.\n\nVotre mission, si vous l’acceptez, sera de trouver José et de lui faire croire que vous êtes la fille du président de Madagascar.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Zara.\n\nVotre mission, si vous l’acceptez, sera de faire croire à José que vous êtes la fille du président de Madagascar.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "José": {
     "target": "Romain V",
-    "mission": "Bonjour agent José.\n\nVotre mission, si vous l’acceptez, sera de trouver Romain V et de discuter avec lui comme si vous vous connaissiez depuis toujours.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent José.\n\nVotre mission, si vous l’acceptez, sera de parler et de discuter avec Romain V comme si vous vous connaissiez depuis toujours.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Romain V": {
     "target": "Enzo",
-    "mission": "Bonjour agent Romain V.\n\nVotre mission, si vous l’acceptez, sera de trouver Enzo et de mimer un éléphant devant lui.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Romain V.\n\nVotre mission, si vous l’acceptez, sera de mimer un éléphant à Enzo.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Enzo": {
     "target": "Maelann",
-    "mission": "Bonjour agent Enzo.\n\nVotre mission, si vous l’acceptez, sera de trouver Maelann et de critiquer les kinés auprès d’elle.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Enzo.\n\nVotre mission, si vous l’acceptez, sera de critiquer les kinés auprès de Maelann.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Maelann": {
-    "target": "Léa Gaussot",
-    "mission": "Bonjour agent Maelann.\n\nVotre mission, si vous l’acceptez, sera de trouver Léa Gaussot et de lui faire deviner le mot « Tour Eiffel » en mimant.\n\nCe message s’autodétruira dans 10 secondes."
+    "target": "Léa G",
+    "mission": "Bonjour agent Maelann.\n\nVotre mission, si vous l’acceptez, sera de faire deviner à Léa G le mot « Tour Eiffel » en mimant.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Léa Gaussot": {
+  "Léa G": {
     "target": "Cécile",
-    "mission": "Bonjour agent Léa Gaussot.\n\nVotre mission, si vous l’acceptez, sera de trouver Cécile et de lui proposer un concours de langue en folie.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Léa G.\n\nVotre mission, si vous l’acceptez, sera de proposer à Cécile un concours de langue en folie : dire 10 fois une phrase difficile sans se tromper (exemple : « Les chaussettes de l’archiduchesse… »).\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Cécile": {
     "target": "Lou",
-    "mission": "Bonjour agent Cécile.\n\nVotre mission, si vous l’acceptez, sera de trouver Lou et de lui faire des grimaces à plusieurs reprises dans la soirée.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Cécile.\n\nVotre mission, si vous l’acceptez, sera de faire des grimaces à Lou plusieurs fois dans la soirée sans raison.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Lou": {
-    "target": "Aïda",
-    "mission": "Bonjour agent Lou.\n\nVotre mission, si vous l’acceptez, sera de faire un slow imaginaire pendant 15 secondes.\n\nCe message s’autodétruira dans 10 secondes."
+    "target": "Quelqu’un",
+    "mission": "Bonjour agent Lou.\n\nVotre mission, si vous l’acceptez, sera de faire un slow imaginaire avec quelqu’un pendant 15 secondes.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Aïda": {
+  "Aida": {
     "target": "Maxence",
-    "mission": "Bonjour agent Aïda.\n\nVotre mission, si vous l’acceptez, sera de lancer la macarena depuis la mezzanine et de faire une démonstration avec Maxence.\n\nCe message s’autodétruira dans 10 secondes."
+    "mission": "Bonjour agent Aida.\n\nVotre mission, si vous l’acceptez, sera de lancer la macarena au cours de la soirée et d’aller faire le show depuis la mezzanine avec Maxence.\n\nCe message s’autodétruira dans 10 secondes."
   }
 }
