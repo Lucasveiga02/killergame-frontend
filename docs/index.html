@@ -40,15 +40,17 @@
           Prénom
         </label>
 
-        <input
-          id="inputName"
-          class="input"
-          type="text"
-          placeholder="Commencez à taper votre prénom pour filtrer…"
-          autocomplete="off"
-          required
-        />
-        <div id="autocompleteList" class="autocomplete-list hidden"></div>
+        <div class="autocomplete-wrapper">
+          <input
+            id="inputName"
+            class="input"
+            type="text"
+            placeholder="Commencez à taper votre prénom pour filtrer…"
+            autocomplete="off"
+            required
+          />
+          <div id="autocompleteList" class="autocomplete-list hidden"></div>
+        </div>
 
         <div class="hint">
           Choisissez un nom proposé (liste déroulante).
