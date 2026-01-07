@@ -1,200 +1,287 @@
-/* =======================
-   BASE (STYLE D’ORIGINE)
-======================= */
+/* =========================
+   RESET & VARIABLES
+========================= */
 
-* { box-sizing: border-box; }
-
-:root{
-  --bg:#0b1220;
-  --card: rgba(255,255,255,0.06);
-  --card2: rgba(255,255,255,0.08);
-  --border: rgba(255,255,255,0.14);
-  --text:#eaf0ff;
-  --muted: rgba(234,240,255,0.75);
-  --danger:#ef4444;
-  --primary:#3b82f6;
-  --secondary:#a78bfa;
+* {
+  box-sizing: border-box;
 }
 
-html, body { height: 100%; }
+:root {
+  --bg: #0b0b0b;
+  --card: #121212;
+  --border: rgba(255,255,255,0.15);
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.7);
+  --gold: #d4af37;
+  --gold-soft: rgba(212,175,55,0.25);
+}
 
-body{
-  margin:0;
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1000px 600px at 20% 0%, rgba(59,130,246,0.25), transparent 60%),
-              radial-gradient(900px 700px at 90% 10%, rgba(167,139,250,0.20), transparent 55%),
+  background: radial-gradient(800px 500px at 20% 0%, rgba(212,175,55,0.15), transparent 60%),
               var(--bg);
   color: var(--text);
 }
 
-.topbar{
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
   position: sticky;
   top: 0;
-  z-index: 5;
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
+  z-index: 10;
   padding: 14px 16px;
   border-bottom: 1px solid var(--border);
-  background: rgba(11,18,32,0.75);
-  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.85);
 }
 
-.brand{ display:flex; gap:10px; align-items:center; }
-
-.dot{
-  width: 12px; height: 12px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 18px rgba(59,130,246,0.35);
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-.brand-title{ font-weight: 800; letter-spacing: 0.2px; }
-.brand-sub{ font-size: 12px; color: var(--muted); margin-top: -2px; }
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 14px rgba(212,175,55,0.6);
+}
 
-.container{
-  max-width: 1050px;
+.brand-title {
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 720px;
   margin: 0 auto;
-  padding: 18px 16px 40px;
+  padding: 20px 16px 40px;
 }
 
-.hidden{ display:none !important; }
+.hidden {
+  display: none !important;
+}
 
-.card{
+.card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
 
-h1,h2{ margin: 0 0 8px; }
-p{ margin: 0 0 12px; }
+/* =========================
+   TEXT
+========================= */
 
-.muted{ color: var(--muted); }
-.hint{ font-size: 12px; color: var(--muted); }
-
-.stack{
-  display:grid;
-  gap: 10px;
-  margin-top: 12px;
-  position: relative; /* 🔑 ancrage autocomplete */
+h1, h2 {
+  margin: 0 0 12px;
+  font-weight: 900;
 }
 
-.label{ font-weight: 700; font-size: 13px; }
+p {
+  margin: 0 0 14px;
+}
 
-.input{
+.muted {
+  color: var(--muted);
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  position: relative; /* 🔑 pour autocomplete */
+}
+
+.input {
   width: 100%;
-  padding: 12px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(0,0,0,0.22);
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #000;
   color: var(--text);
+  font-size: 16px;
   outline: none;
 }
 
-.input:focus{
-  border-color: rgba(59,130,246,0.6);
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.20);
+.input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-soft);
 }
 
-.btn{
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 900;
+  cursor: pointer;
   border: 1px solid transparent;
-  border-radius: 12px;
-  padding: 12px 14px;
-  font-weight: 800;
-  cursor:pointer;
-  color: var(--text);
-  background: rgba(255,255,255,0.08);
 }
 
-.btn:hover{ filter: brightness(1.06); }
-.btn:active{ transform: translateY(1px); }
+.btn-gold {
+  background: linear-gradient(135deg, #d4af37, #f5d76e);
+  color: #000;
+}
 
-.btn-primary{ background: var(--primary); }
-.btn-secondary{ background: rgba(167,139,250,0.22); }
-.btn-ghost{ background: rgba(255,255,255,0.05); }
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
 
-.row{ display:flex; align-items:center; }
-.row.space-between{ justify-content: space-between; gap: 10px; }
+/* =========================
+   MISSION VIEW
+========================= */
 
-.chip{
-  display:inline-flex;
-  align-items:center;
-  padding: 6px 10px;
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.chip {
+  margin-top: 6px;
+  padding: 6px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--gold);
+  color: var(--gold);
   font-weight: 800;
   font-size: 12px;
-  margin-top: 6px;
 }
 
-.timer{
-  text-align:right;
-  padding: 10px 12px;
+.timer {
+  text-align: right;
+  padding: 10px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
-  min-width: 160px;
+  border: 1px solid var(--gold);
+  background: rgba(212,175,55,0.08);
 }
 
-.timer-label{ font-size: 12px; color: var(--muted); }
-.timer-value{ font-size: 28px; font-weight: 900; line-height: 1.1; }
-
-.mission-box{
-  margin-top: 12px;
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
-}
-
-.mission-label{
+.timer-label {
   font-size: 12px;
   color: var(--muted);
-  font-weight: 800;
+}
+
+.timer-value {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.mission-box {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: rgba(212,175,55,0.08);
+}
+
+.mission-label {
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.6px;
 }
 
-.mission-text{
-  margin-top: 6px;
+.mission-text {
+  margin-top: 10px;
   font-size: 18px;
   font-weight: 800;
-  white-space: pre-line; /* 🔑 retours à la ligne */
+  white-space: pre-line;
 }
 
-/* =======================
-   AUTOCOMPLETE (FINAL)
-======================= */
+/* =========================
+   ACTIONS
+========================= */
 
-.autocomplete-list{
+.actions.single {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   ALERT
+========================= */
+
+.alert {
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(220,38,38,0.6);
+  background: rgba(220,38,38,0.15);
+  font-weight: 800;
+}
+
+/* =========================
+   AUTOCOMPLETE (iOS SAFE)
+========================= */
+
+.autocomplete-list {
   position: absolute;
   top: 100%;
   left: 0;
-  right: 0;                /* 🔑 même largeur que l’input */
+  right: 0;
   z-index: 50;
 
   max-height: 220px;
   overflow-y: auto;
   margin-top: 4px;
 
-  background: var(--card2);
-  border: 1px solid var(--border);
+  background: #0b0b0b;
+  border: 1px solid var(--gold);
   border-radius: 12px;
 }
 
-.autocomplete-item{
-  padding: 10px 12px;
+.autocomplete-item {
+  padding: 12px;
   cursor: pointer;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.autocomplete-item:last-child{
+.autocomplete-item:last-child {
   border-bottom: none;
 }
 
-.autocomplete-item:hover{
-  background: rgba(255,255,255,0.08);
+.autocomplete-item:hover {
+  background: rgba(212,175,55,0.15);
 }
