@@ -156,10 +156,10 @@
     "mission": "Bonjour agent Emie.\n\nVotre mission, si vous l’acceptez, sera de faire signe à Joyce de vous suivre dans la mezzanine puis de dire « non laisse » 3 fois dans la soirée.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Joyce": {
-    "target": "Gabi",
+    "target": "Gaby",
     "mission": "Bonjour agent Joyce.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Gabi que vous avez été figurante dans un film ou une série connue (au choix).\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Gabi": {
+  "Gaby": {
     "target": "Zara",
     "mission": "Bonjour agent Gabi.\n\nVotre mission, si vous l’acceptez, sera de faire dire cette phrase en portugais à Zara : « Eu quero mamar os peitos da cabritinha ».\n\nCe message s’autodétruira dans 10 secondes."
   },
