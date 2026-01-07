@@ -48,14 +48,11 @@
           id="inputName"
           class="input"
           type="text"
-          list="playersDatalist"
-          placeholder="Commencez à taper votre nom pour filtrer…"
+          placeholder="Tape pour filtrer…"
           autocomplete="off"
-          autocapitalize="none"
-          autocorrect="off"
-          spellcheck="false"
           required
         />
+        <div id="autocompleteList" class="autocomplete-list hidden"></div>
 
         <div class="hint">
           Choisissez un nom proposé (liste déroulante).
@@ -105,7 +102,6 @@
   </main>
 
   <!-- datalist global -->
-  <datalist id="playersDatalist"></datalist>
 
   <script src="./app.js?v=static1"></script>
 </body>
