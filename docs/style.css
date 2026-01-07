@@ -148,7 +148,7 @@ p {
 .btn {
   padding: 14px;
   border-radius: 14px;
-  font-weight: 900;
+  font-weight: 1500;
   cursor: pointer;
   border: 1px solid transparent;
 }
@@ -261,7 +261,7 @@ p {
   top: 100%;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 0;
 
   max-height: 220px;
   overflow-y: auto;
