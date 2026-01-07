@@ -8,9 +8,8 @@ const TIMEOUT_SEC = 10;
 /***********************
  * STATE
  ***********************/
-let players = [];          // [{id, display, search?}, ...]
-let assignments = {};      // { "Lucas": { target:"Pauline", mission:"..." }, ... }
-
+let players = [];          // [{id, display}, ...]
+let assignments = {};      // { "Lucas": { target, mission }, ... }
 let countdownTimer = null;
 
 /***********************
@@ -32,25 +31,28 @@ function clearAlert() {
 
 function normalize(s) {
   return (s || "")
-    .toString()
-    .trim()
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // strip accents
-    .replace(/\s+/g, " ");
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
 }
 
+/***********************
+ * NAV
+ ***********************/
 function showHome() {
   stopCountdown();
   clearAlert();
   $("viewHome").classList.remove("hidden");
   $("viewMission").classList.add("hidden");
   $("inputName").value = "";
+  $("autocompleteList").classList.add("hidden");
 }
 
 function showMission(playerName, missionText, targetText) {
   clearAlert();
-  $("whoami").textContent = `Connecté : ${playerName}`;
+
+  $("whoami").textContent = `Agent : ${playerName}`;
   $("missionText").textContent = missionText || "—";
   $("targetText").textContent = targetText || "—";
 
@@ -64,21 +66,21 @@ function showMission(playerName, missionText, targetText) {
  * COUNTDOWN (MISSION ONLY)
  ***********************/
 function stopCountdown() {
-  if (countdownTimer) clearInterval(countdownTimer);
-  countdownTimer = null;
+  if (countdownTimer) {
+    clearInterval(countdownTimer);
+    countdownTimer = null;
+  }
 }
 
 function startCountdown(seconds) {
   stopCountdown();
   let remaining = seconds;
-  $("countdown").textContent = String(remaining);
+  $("countdown").textContent = remaining;
 
   countdownTimer = setInterval(() => {
-    remaining -= 1;
-    $("countdown").textContent = String(Math.max(0, remaining));
-    if (remaining <= 0) {
-      showHome();
-    }
+    remaining--;
+    $("countdown").textContent = Math.max(0, remaining);
+    if (remaining <= 0) showHome();
   }, 1000);
 }
 
@@ -87,59 +89,76 @@ function startCountdown(seconds) {
  ***********************/
 async function loadJson(url) {
   const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
+  if (!res.ok) throw new Error(`Failed to load ${url}`);
   return res.json();
 }
 
 async function initData() {
   players = await loadJson(PLAYERS_URL);
   assignments = await loadJson(ASSIGNMENTS_URL);
-
-  // build datalist
-  const dl = $("playersDatalist");
-  dl.innerHTML = players
-    .map((p) => `<option value="${escapeHtml(p.display || p.id)}"></option>`)
-    .join("");
 }
 
-function escapeHtml(s) {
-  return (s || "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+/***********************
+ * AUTOCOMPLETE (iOS SAFE)
+ ***********************/
+function setupAutocomplete() {
+  const input = $("inputName");
+  const list = $("autocompleteList");
+
+  input.addEventListener("input", () => {
+    const value = normalize(input.value);
+    list.innerHTML = "";
+
+    if (!value) {
+      list.classList.add("hidden");
+      return;
+    }
+
+    const matches = players.filter(p =>
+      normalize(p.display || p.id).includes(value)
+    );
+
+    if (!matches.length) {
+      list.classList.add("hidden");
+      return;
+    }
+
+    matches.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "autocomplete-item";
+      div.textContent = p.display || p.id;
+      div.onclick = () => {
+        input.value = p.display || p.id;
+        list.classList.add("hidden");
+      };
+      list.appendChild(div);
+    });
+
+    list.classList.remove("hidden");
+  });
 }
 
 /***********************
  * RESOLVE PLAYER
  ***********************/
 function resolvePlayer(inputText) {
-  const raw = (inputText || "").trim();
-  if (!raw) return null;
+  const n = normalize(inputText);
+  if (!n) return null;
 
-  // exact match by display/id
-  const exact = players.find((p) => (p.display || p.id) === raw);
-  if (exact) return exact;
+  const matches = players.filter(
+    p => normalize(p.display || p.id) === n
+  );
 
-  // accent-insensitive match
-  const n = normalize(raw);
-  const candidates = players.filter((p) => normalize(p.display || p.id) === n);
-  if (candidates.length === 1) return candidates[0];
-
-  return null;
+  return matches.length === 1 ? matches[0] : null;
 }
 
 function findAssignmentForPlayer(playerName) {
-  // assignments is a dict keyed by player name (ID)
-  // allow accent-insensitive key match
   if (assignments[playerName]) return assignments[playerName];
 
-  const wanted = normalize(playerName);
-  for (const k of Object.keys(assignments || {})) {
-    if (normalize(k) === wanted) return assignments[k];
-  }
-  return null;
+  const n = normalize(playerName);
+  return Object.entries(assignments).find(
+    ([k]) => normalize(k) === n
+  )?.[1] || null;
 }
 
 /***********************
@@ -151,19 +170,19 @@ function wireEvents() {
 
     const player = resolvePlayer($("inputName").value);
     if (!player) {
-      showAlert("Choisis un prénom valide dans la liste déroulante.");
+      showAlert("Merci de choisir un prénom valide dans la liste.");
       return;
     }
 
     const name = player.id || player.display;
-    const a = findAssignmentForPlayer(name);
+    const mission = findAssignmentForPlayer(name);
 
-    if (!a) {
-      showAlert("Aucune mission trouvée pour ce prénom (vérifie assignments.json).");
+    if (!mission) {
+      showAlert("Mission introuvable pour ce prénom.");
       return;
     }
 
-    showMission(name, a.mission, a.target);
+    showMission(name, mission.mission, mission.target);
   });
 
   $("btnHomeMission").addEventListener("click", showHome);
@@ -177,8 +196,9 @@ function wireEvents() {
     wireEvents();
     showHome();
     await initData();
+    setupAutocomplete();
   } catch (err) {
     console.error(err);
-    showAlert("Erreur chargement des fichiers JSON. Vérifie docs/data/players.json et assignments.json.");
+    showAlert("Erreur de chargement des fichiers data.");
   }
 })();
