@@ -27,26 +27,28 @@
 
     <!-- VIEW: HOME -->
     <section id="viewHome" class="view">
-      <div class="grid2">
+      <div class="grid1">
         <div class="card">
           <h1>Récupérer ma mission</h1>
           <p class="muted">
-            Entre ton nom et prénom, récupère ta mission, et attention au timer.
+            Entre ton prénom, récupère ta mission, et attention au timer.
           </p>
 
           <form id="formLogin" class="stack" autocomplete="off">
-            <label class="label" for="inputName">Nom & prénom</label>
+            <label class="label" for="inputName">Prénom</label>
             <input
               id="inputName"
               class="input"
               type="text"
               list="playersDatalist"
-              placeholder="Tape pour filtrer… (ex: Lu → Lucas, Ludo…)"
+              placeholder="Tape pour filtrer…"
               autocomplete="off"
               required
             />
+            <datalist id="playersDatalist"></datalist>
+
             <div class="hint">
-              Choisis un nom proposé (liste déroulante)
+              Choisis un nom proposé (liste déroulante) pour éviter les erreurs.
             </div>
 
             <button class="btn btn-primary" type="submit">
@@ -57,41 +59,12 @@
               Astuce : tu peux taper sans accents (ex: “Theo”).
             </div>
           </form>
-        </div>
 
-        <div class="card">
-          <h2>Réalisation / Déductions</h2>
-          <p class="muted">
-            Quand tu reviens plus tard, tu peux déclarer ta mission faite ou tenter de deviner
-            qui t’a ciblé et avec quelle mission.
-          </p>
-
-          <div class="stack">
-            <button id="btnGoGuessFromHome" class="btn btn-secondary" type="button">
-              J’ai trouvé la mission dont j’étais la cible
-            </button>
-
-            <button id="btnGoMissionFromHome" class="btn btn-ghost" type="button">
-              Voir ma mission (si déjà connecté)
-            </button>
-
-            <hr class="sep"/>
-
-            <div id="adminBlock" class="admin hidden">
-              <div class="admin-title">Admin (Lucas Veiga)</div>
-              <button id="btnGoAdmin" class="btn btn-danger" type="button">
-                Voir la liste des participants
-              </button>
-            </div>
+          <div class="info">
+            L’écran mission se ferme automatiquement après 10 secondes.
           </div>
         </div>
       </div>
-
-      <footer class="footer">
-        <span class="muted">
-          L’écran mission se ferme automatiquement après 10 secondes.
-        </span>
-      </footer>
     </section>
 
     <!-- VIEW: MISSION -->
@@ -117,6 +90,28 @@
         <div class="mission-box">
           <div class="mission-label">Cible</div>
           <div id="targetText" class="mission-text">—</div>
+        </div>
+
+        <!-- ADMIN (visible only for Lucas, gated by password in JS) -->
+        <div id="adminBox" class="admin hidden">
+          <div class="admin-title">Admin (Lucas)</div>
+
+          <div class="stack">
+            <label class="label" for="adminPass">Mot de passe</label>
+            <input
+              id="adminPass"
+              class="input"
+              type="password"
+              placeholder="Entrez le mot de passe"
+              autocomplete="off"
+            />
+
+            <button id="btnAdminUnlock" class="btn btn-gold" type="button">
+              Accéder au tableau des résultats
+            </button>
+
+            <div id="adminStatus" class="status muted"></div>
+          </div>
         </div>
 
         <div class="actions">
@@ -158,10 +153,11 @@
             class="input"
             type="text"
             list="playersDatalist"
-            placeholder="Tape pour filtrer… (ex: Lu → Lucas, Ludo…)"
+            placeholder="Tape pour filtrer…"
+            autocomplete="off"
             required
           />
-          <datalist id="playersDatalist"></datalist>
+
           <div class="hint">
             Choisis un nom proposé (liste déroulante) pour éviter les erreurs.
           </div>
@@ -190,7 +186,7 @@
         <div class="row space-between">
           <div>
             <h2>Classement</h2>
-            <div class="muted">Visible uniquement depuis le profil Lucas Veiga.</div>
+            <div class="muted">Visible uniquement depuis le profil Lucas.</div>
           </div>
 
           <button id="btnHomeAdmin" class="btn btn-ghost" type="button">
