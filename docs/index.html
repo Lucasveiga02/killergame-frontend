@@ -34,6 +34,9 @@
             Entre ton prénom, récupère ta mission, et attention au timer.
           </p>
 
+          <!-- (Optionnel) champ "piège" pour réduire l'autofill navigateur -->
+          <input type="text" name="fakeusernameremembered" style="display:none" autocomplete="username">
+
           <form id="formLogin" class="stack" autocomplete="off">
             <label class="label" for="inputName">Prénom</label>
             <input
@@ -43,8 +46,13 @@
               list="playersDatalist"
               placeholder="Tape pour filtrer…"
               autocomplete="off"
+              autocapitalize="none"
+              autocorrect="off"
+              spellcheck="false"
               required
             />
+
+            <!-- ✅ UN SEUL datalist dans tout le fichier -->
             <datalist id="playersDatalist"></datalist>
 
             <div class="hint">
@@ -104,6 +112,9 @@
               type="password"
               placeholder="Entrez le mot de passe"
               autocomplete="off"
+              autocapitalize="none"
+              autocorrect="off"
+              spellcheck="false"
             />
 
             <button id="btnAdminUnlock" class="btn btn-gold" type="button">
@@ -155,6 +166,9 @@
             list="playersDatalist"
             placeholder="Tape pour filtrer…"
             autocomplete="off"
+            autocapitalize="none"
+            autocorrect="off"
+            spellcheck="false"
             required
           />
 
