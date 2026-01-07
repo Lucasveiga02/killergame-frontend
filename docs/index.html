@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Killer Game</title>
-  <link rel="stylesheet" href="./style.css?v=gold" />
+  <link rel="stylesheet" href="./style.css?v=static1" />
 </head>
 <body>
   <header class="topbar">
@@ -12,242 +12,81 @@
       <div class="dot"></div>
       <div>
         <div class="brand-title">Killer Game</div>
-        <div class="brand-sub">Tablette / Soirée</div>
+        <div class="brand-sub">Mode statique (GitHub Pages)</div>
       </div>
     </div>
-
-    <button id="btnHomeHeader" class="btn btn-ghost" type="button">
-      Retour à l’accueil
-    </button>
   </header>
 
   <main class="container">
-    <!-- GLOBAL ALERT -->
     <div id="globalAlert" class="alert hidden" role="alert"></div>
 
-    <!-- VIEW: HOME -->
-    <section id="viewHome" class="view">
-      <div class="grid1">
-        <div class="card">
-          <h1>Récupérer ma mission</h1>
-          <p class="muted">
-            Entre ton prénom, récupère ta mission, et attention au timer.
-          </p>
+    <!-- HOME -->
+    <section id="viewHome" class="card">
+      <h1>Afficher ma mission</h1>
+      <p class="muted">Entre ton prénom (sélectionne dans la liste) puis affiche ta mission.</p>
 
-          <!-- champ "piège" pour réduire l'autofill navigateur -->
-          <input type="text" name="fakeusernameremembered" style="display:none" autocomplete="username">
+      <form id="formLogin" class="stack" autocomplete="off">
+        <label class="label" for="inputName">Prénom</label>
+        <input
+          id="inputName"
+          class="input"
+          type="text"
+          list="playersDatalist"
+          placeholder="Tape pour filtrer…"
+          autocomplete="off"
+          autocapitalize="none"
+          autocorrect="off"
+          spellcheck="false"
+          required
+        />
+        <div class="hint">Choisis un nom proposé (liste déroulante).</div>
 
-          <form id="formLogin" class="stack" autocomplete="off">
-            <label class="label" for="inputName">Prénom</label>
-            <input
-              id="inputName"
-              class="input"
-              type="text"
-              list="playersDatalist"
-              placeholder="Tape pour filtrer…"
-              autocomplete="off"
-              autocapitalize="none"
-              autocorrect="off"
-              spellcheck="false"
-              required
-            />
-
-            <div class="hint">
-              Choisis un nom proposé (liste déroulante) pour éviter les erreurs.
-            </div>
-
-            <button class="btn btn-primary" type="submit">
-              Récupérer ma mission
-            </button>
-
-            <div class="hint">
-              Astuce : tu peux taper sans accents (ex: “Theo”).
-            </div>
-          </form>
-
-          <div class="info">
-            L’écran mission se ferme automatiquement après 10 secondes.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIEW: MISSION -->
-    <section id="viewMission" class="view hidden">
-      <div class="card">
-        <div class="row space-between">
-          <div>
-            <h2>Ta mission</h2>
-            <div id="whoami" class="chip"></div>
-          </div>
-
-          <!-- ✅ timer uniquement ici -->
-          <div class="timer">
-            <div class="timer-label">Retour accueil dans</div>
-            <div id="countdown" class="timer-value">10</div>
-          </div>
-        </div>
-
-        <div class="mission-box">
-          <div class="mission-label">Mission</div>
-          <div id="missionText" class="mission-text">—</div>
-        </div>
-
-        <div class="mission-box">
-          <div class="mission-label">Cible</div>
-          <div id="targetText" class="mission-text">—</div>
-        </div>
-
-        <!-- ADMIN (visible only for Lucas) -->
-        <div id="adminBox" class="admin hidden">
-          <div class="admin-title">Admin (Lucas)</div>
-
-          <div class="stack">
-            <label class="label" for="adminPass">Mot de passe</label>
-            <input
-              id="adminPass"
-              class="input"
-              type="password"
-              placeholder="Entrez le mot de passe"
-              autocomplete="off"
-              autocapitalize="none"
-              autocorrect="off"
-              spellcheck="false"
-            />
-
-            <button id="btnAdminUnlock" class="btn btn-gold" type="button">
-              Accéder au tableau des résultats
-            </button>
-
-            <div id="adminStatus" class="status muted"></div>
-          </div>
-        </div>
-
-        <div class="actions">
-          <button id="btnMissionDone" class="btn btn-primary" type="button">
-            J’ai effectué ma mission
-          </button>
-
-          <button id="btnGoGuessFromMission" class="btn btn-secondary" type="button">
-            J’ai trouvé la mission dont j’étais la cible
-          </button>
-
-          <button id="btnHomeMission" class="btn btn-ghost" type="button">
-            Retour à l’accueil
-          </button>
-        </div>
-
-        <div id="missionStatus" class="status muted"></div>
-      </div>
-    </section>
-
-    <!-- VIEW: GUESS -->
-    <section id="viewGuess" class="view hidden">
-      <div class="card">
-        <div class="row space-between">
-          <div>
-            <h2>J’ai trouvé la mission dont j’étais la cible</h2>
-            <div class="muted">
-              Accuse un killer + décris la mission qu’il a faite contre toi.
-            </div>
-          </div>
-
-          <button id="btnHomeGuess" class="btn btn-ghost" type="button">
-            Retour à l’accueil
-          </button>
-        </div>
-
-        <form id="formGuess" class="stack" autocomplete="off">
-          <label class="label" for="killerInput">Prénom du killer</label>
-          <input
-            id="killerInput"
-            class="input"
-            type="text"
-            list="playersDatalist"
-            placeholder="Tape pour filtrer…"
-            autocomplete="off"
-            autocapitalize="none"
-            autocorrect="off"
-            spellcheck="false"
-            required
-          />
-
-          <div class="hint">
-            Choisis un nom proposé (liste déroulante) pour éviter les erreurs.
-          </div>
-
-          <label class="label" for="guessMission">Mission devinée</label>
-          <textarea
-            id="guessMission"
-            class="textarea"
-            rows="4"
-            placeholder="Décris la mission que tu penses avoir subie…"
-            required
-          ></textarea>
-
-          <button class="btn btn-primary" type="submit">
-            Valider mon guess
-          </button>
-
-          <div id="guessStatus" class="status muted"></div>
-        </form>
-      </div>
-    </section>
-
-    <!-- VIEW: ADMIN -->
-    <section id="viewAdmin" class="view hidden">
-      <div class="card">
-        <div class="row space-between">
-          <div>
-            <h2>Classement</h2>
-            <div class="muted">Visible uniquement depuis le profil Lucas.</div>
-          </div>
-
-          <button id="btnHomeAdmin" class="btn btn-ghost" type="button">
-            Retour à l’accueil
-          </button>
-        </div>
-
-        <div class="row gap">
-          <button id="btnRefreshAdmin" class="btn btn-secondary" type="button">
-            Rafraîchir
-          </button>
-
-          <!-- ✅ NOUVEAU : reset state -->
-          <button id="btnResetState" class="btn btn-danger" type="button">
-            Reset état (⚠️)
-          </button>
-        </div>
-
-        <div class="tablewrap">
-          <table class="table" id="adminTable">
-            <thead>
-              <tr>
-                <th>Joueur</th>
-                <th>Points</th>
-                <th>Mission réalisée</th>
-                <th>Découvert par la cible</th>
-                <th>A trouvé son killer</th>
-                <th>Guess killer</th>
-                <th>Guess mission</th>
-              </tr>
-            </thead>
-            <tbody id="adminTbody">
-              <tr><td colspan="7" class="muted">Chargement…</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <button class="btn btn-gold" type="submit">
+          Afficher la mission
+        </button>
 
         <div class="hint">
-          Note : le calcul exact des points vient du backend. Le frontend affiche.
+          L’écran mission se referme automatiquement après 10 secondes.
+        </div>
+      </form>
+    </section>
+
+    <!-- MISSION -->
+    <section id="viewMission" class="card hidden">
+      <div class="row space-between">
+        <div>
+          <h2>Ta mission</h2>
+          <div id="whoami" class="chip"></div>
+        </div>
+
+        <div class="timer">
+          <div class="timer-label">Retour accueil dans</div>
+          <div id="countdown" class="timer-value">10</div>
         </div>
       </div>
+
+      <div class="mission-box">
+        <div class="mission-label">Mission</div>
+        <div id="missionText" class="mission-text">—</div>
+      </div>
+
+      <div class="mission-box">
+        <div class="mission-label">Cible</div>
+        <div id="targetText" class="mission-text">—</div>
+      </div>
+
+      <div class="actions single">
+        <button id="btnHomeMission" class="btn btn-ghost" type="button">
+          Retour à l’accueil
+        </button>
+      </div>
     </section>
+
   </main>
 
-  <script src="./app.js"></script>
-
-  <!-- ✅ DATALIST GLOBAL (utilisé par Accueil + Accusation) -->
+  <!-- datalist global -->
   <datalist id="playersDatalist"></datalist>
+
+  <script src="./app.js?v=static1"></script>
 </body>
 </html>
