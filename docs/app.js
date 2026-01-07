@@ -134,7 +134,7 @@ function resolvePlayerDisplay(inputText) {
 }
 
 /***********************
- * COUNTDOWN
+ * COUNTDOWN (MISSION ONLY)
  ***********************/
 function stopCountdown() {
   if (countdownTimer) clearInterval(countdownTimer);
@@ -163,7 +163,7 @@ function logoutToHome() {
   stopCountdown();
   session = { player: null, mission: null, target: null, missionDone: false };
 
-  // clear fields safely (some views might not be present depending on HTML)
+  // clear fields safely
   if ($("inputName")) $("inputName").value = "";
   if ($("killerInput")) $("killerInput").value = "";
   if ($("guessMission")) $("guessMission").value = "";
@@ -205,7 +205,7 @@ async function loginAndFetchMission(displayName) {
 
   renderMissionScreen();
   showView("viewMission");
-  startCountdown(MISSION_TIMEOUT_SEC);
+  startCountdown(MISSION_TIMEOUT_SEC); // ✅ timer ONLY on mission
 }
 
 function renderMissionScreen() {
@@ -253,11 +253,11 @@ async function markMissionDone() {
 }
 
 /***********************
- * GUESS FLOW
+ * GUESS FLOW (NO TIMER)
  ***********************/
 function goToGuess() {
   clearAlert();
-  stopCountdown();
+  stopCountdown(); // ✅ stop timer when leaving mission
 
   if (!session.player) {
     showAlert("Tu dois d’abord te connecter pour faire un guess.");
@@ -313,10 +313,12 @@ async function submitGuess() {
 }
 
 /***********************
- * ADMIN (Lucas + password)
+ * ADMIN (NO TIMER)
  ***********************/
 async function unlockAdmin() {
   clearAlert();
+  stopCountdown(); // ✅ stop timer when leaving mission
+
   if (!session.player || session.player.display !== ADMIN_NAME) {
     showAlert("Accès refusé.");
     return;
