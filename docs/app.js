@@ -1,8 +1,8 @@
 /***********************
  * STATIC DATA PATHS
  ***********************/
-const PLAYERS_URL = "./data/players.json";
-const ASSIGNMENTS_URL = "./data/assignments.json";
+const PLAYERS_URL = "./data/players.json?v=1";
+const ASSIGNMENTS_URL = "./data/assignments.json?v=1";
 const TIMEOUT_SEC = 10;
 
 /***********************
