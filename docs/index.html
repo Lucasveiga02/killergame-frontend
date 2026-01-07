@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Killer Game</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css?v=gold" />
 </head>
 <body>
   <header class="topbar">
@@ -34,7 +34,7 @@
             Entre ton prénom, récupère ta mission, et attention au timer.
           </p>
 
-          <!-- (Optionnel) champ "piège" pour réduire l'autofill navigateur -->
+          <!-- champ "piège" pour réduire l'autofill navigateur -->
           <input type="text" name="fakeusernameremembered" style="display:none" autocomplete="username">
 
           <form id="formLogin" class="stack" autocomplete="off">
@@ -51,9 +51,6 @@
               spellcheck="false"
               required
             />
-
-            <!-- ✅ UN SEUL datalist dans tout le fichier -->
-            <datalist id="playersDatalist"></datalist>
 
             <div class="hint">
               Choisis un nom proposé (liste déroulante) pour éviter les erreurs.
@@ -100,7 +97,7 @@
           <div id="targetText" class="mission-text">—</div>
         </div>
 
-        <!-- ADMIN (visible only for Lucas, gated by password in JS) -->
+        <!-- ADMIN (visible only for Lucas) -->
         <div id="adminBox" class="admin hidden">
           <div class="admin-title">Admin (Lucas)</div>
 
@@ -149,7 +146,9 @@
         <div class="row space-between">
           <div>
             <h2>J’ai trouvé la mission dont j’étais la cible</h2>
-            <div class="muted">Accuse un killer + décris la mission qu’il a faite contre toi.</div>
+            <div class="muted">
+              Accuse un killer + décris la mission qu’il a faite contre toi.
+            </div>
           </div>
 
           <button id="btnHomeGuess" class="btn btn-ghost" type="button">
@@ -241,5 +240,8 @@
   </main>
 
   <script src="./app.js"></script>
+
+  <!-- ✅ DATALIST GLOBAL (utilisé par Accueil + Accusation) -->
+  <datalist id="playersDatalist"></datalist>
 </body>
 </html>
