@@ -11,7 +11,7 @@
     "target": "Romain",
     "mission": "Bonjour agent Maxence.\n\nVotre mission, si vous l’acceptez, sera de trouver Romain et de lui proposer un concours de pompes.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Romain": {
+  "Romain H": {
     "target": "David",
     "mission": "Bonjour agent Romain.\n\nVotre mission, si vous l’acceptez, sera de trouver David et de lui faire un câlin.\n\nCe message s’autodétruira dans 10 secondes."
   },
