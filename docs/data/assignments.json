@@ -132,10 +132,10 @@
     "mission": "Bonjour agent Steven.\n\nVotre mission, si vous l’acceptez, sera de répéter les phrases d’Antoine.\n\nCe message s’autodétruira dans 10 secondes."
   },
   "Antoine": {
-    "target": "Jean mi",
+    "target": "Kevin",
     "mission": "Bonjour agent Antoine.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Jean mi que vous voudriez que Trump s’occupe de Macron comme il s’est occupé de Maduro.\n\nCe message s’autodétruira dans 10 secondes."
   },
-  "Jean mi": {
+  "Kevin": {
     "target": "Emie",
     "mission": "Bonjour agent Jean mi.\n\nVotre mission, si vous l’acceptez, sera de faire croire à Emie qu’une grosse araignée est posée sur son épaule.\n\nCe message s’autodétruira dans 10 secondes."
   },
